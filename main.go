@@ -50,17 +50,17 @@ func PowerUp(profile Profile, multiplier int) Profile {
 	var Multiplier Profile
 	Multiplier.Name = profile.Name
 	if profile.Name == "Sasuke" {
-		Multiplier.Health = 200 + (200 * multiplier)
-		Multiplier.Power = 100 + (100 * multiplier)
-		Multiplier.Exp = 0 + (0 * multiplier)
+		Multiplier.Health = profile.Health + (profile.Health * multiplier)
+		Multiplier.Power = profile.Power + (profile.Power * multiplier)
+		Multiplier.Exp = profile.Exp + (profile.Exp * multiplier)
 	} else if profile.Name == "Goku" {
-		Multiplier.Health = 400 + (400 * multiplier)
-		Multiplier.Power = 300 + (300 * multiplier)
-		Multiplier.Exp = 100 + (100 * multiplier)
+		Multiplier.Health = profile.Health + (profile.Health * multiplier)
+		Multiplier.Power = profile.Power + (profile.Power * multiplier)
+		Multiplier.Exp = profile.Exp + (profile.Exp * multiplier)
 	} else if profile.Name == "Naruto" {
-		Multiplier.Health = 150 + (150 * multiplier)
-		Multiplier.Power = 200 + (200 * multiplier)
-		Multiplier.Exp = 50 + (50 * multiplier)
+		Multiplier.Health = profile.Health + (profile.Health * multiplier)
+		Multiplier.Power = profile.Power + (profile.Power * multiplier)
+		Multiplier.Exp = profile.Exp + (profile.Exp * multiplier)
 	}
 
 	return Multiplier
