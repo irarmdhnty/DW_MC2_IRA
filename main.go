@@ -47,21 +47,9 @@ func MakeProfile(inputName string) Profile {
 }
 
 func PowerUp(profile Profile, multiplier int) Profile {
-	var Multiplier Profile
-	Multiplier.Name = profile.Name
-	if profile.Name == "Sasuke" {
-		Multiplier.Health = profile.Health + (profile.Health * multiplier)
-		Multiplier.Power = profile.Power + (profile.Power * multiplier)
-		Multiplier.Exp = profile.Exp + (profile.Exp * multiplier)
-	} else if profile.Name == "Goku" {
-		Multiplier.Health = profile.Health + (profile.Health * multiplier)
-		Multiplier.Power = profile.Power + (profile.Power * multiplier)
-		Multiplier.Exp = profile.Exp + (profile.Exp * multiplier)
-	} else if profile.Name == "Naruto" {
-		Multiplier.Health = profile.Health + (profile.Health * multiplier)
-		Multiplier.Power = profile.Power + (profile.Power * multiplier)
-		Multiplier.Exp = profile.Exp + (profile.Exp * multiplier)
-	}
+	profile.Health = profile.Health + (profile.Health * multiplier)
+	profile.Power = profile.Power + (profile.Power * multiplier)
+	profile.Exp = profile.Exp + (profile.Exp * multiplier)
 
-	return Multiplier
+	return profile
 }
